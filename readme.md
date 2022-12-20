@@ -1,0 +1,1 @@
+A Docker development environment built in a ubuntu ec2 instance using Terraform.
