@@ -25,7 +25,6 @@ resource "aws_internet_gateway" "brc_internet_gateway" {
   tags = {
     Name = "dev-igw"
   }
-
 }
 
 resource "aws_route_table" "brc_public_rt" {
@@ -34,7 +33,6 @@ resource "aws_route_table" "brc_public_rt" {
   tags = {
     Name = "dev-public-rt"
   }
-
 }
 
 resource "aws_route" "default_route" {
@@ -57,7 +55,7 @@ resource "aws_security_group" "brc_sg" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["76.184.44.33/32"]
+    cidr_blocks = ["76.184.44.32/32"]
   }
 
   egress {
@@ -75,7 +73,7 @@ resource "aws_key_pair" "brc_auth" {
 
 resource "aws_instance" "dev_node" {
     instance_type = "t2.micro"
-    ami = data.aws_ami.serve_ami.id
+    ami = data.aws_ami.server_ami.id
     key_name = aws_key_pair.brc_auth.id
     vpc_security_group_ids = [aws_security_group.brc_sg.id]
     subnet_id = aws_subnet.brc_public_subnet.id
