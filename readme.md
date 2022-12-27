@@ -6,13 +6,13 @@
 
 Terraform is an open-source infrastructure as a code (IAC) tool that allows to create, manage & deploy the production-ready environment. Terraform codifies cloud APIs into declarative configuration files. Terraform can manage both existing service providers and custom in-house solutions.
 
-![[Terraform.png]]
+![](2022-12-26-23-50-56.png)
 
 #### What is Docker?
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
-![[Docker.png]]
+![](2022-12-26-23-51-13.png)
 
 ### Prerequisites:
 
@@ -188,7 +188,7 @@ variable "host_os" {
 **Step 5: Docker Bootstrap**
 - create `userdata.tpl` template file to bootstap Docker to the instance
 
-```json
+```
 #!/bin/bash
 sudo apt-get update -y &&
 sudo apt-get install -y \
@@ -216,7 +216,7 @@ output "dev_ip" {
 **Step 7: Create config file**
 - Create a `linux-ssh-config.tpl` config file to attach to the provisioner on the instance
 
-```json
+```
 cat << EOF >> ~/.ssh/config
 
 Host ${hostname}
