@@ -6,13 +6,13 @@
 
 Terraform is an open-source infrastructure as a code (IAC) tool that allows to create, manage & deploy the production-ready environment. Terraform codifies cloud APIs into declarative configuration files. Terraform can manage both existing service providers and custom in-house solutions.
 
-![](2022-12-26-23-50-56.png)
+![](2022-12-26-23-52-53.png)
 
 #### What is Docker?
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
-![](2022-12-26-23-51-13.png)
+![](2022-12-26-23-54-00.png)
 
 ### Prerequisites:
 
